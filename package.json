@@ -1,5 +1,11 @@
 {
   "private": true,
+  "name": "gatsby-theme-personalwiki",
+  "author": "Daniel Chapman danielstephenchapman@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dschapman/gatsby-theme-personalwiki.git"
+  },
   "workspaces": [
     "theme",
     "demo"
