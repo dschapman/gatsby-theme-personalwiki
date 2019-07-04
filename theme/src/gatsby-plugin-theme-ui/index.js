@@ -58,5 +58,10 @@ export default {
       fontSize: 5,
       lineHeight: "heading",
     },
+    h2: {
+      color: "text",
+      fontSize: 4,
+      lineHeight: "heading",
+    },
   },
 }

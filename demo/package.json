@@ -9,11 +9,12 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^2.13.1",
-    "gatsby-theme-jam-example": "*",
+    "gatsby": "^2.13.3",
+    "gatsby-theme-personalwiki": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
