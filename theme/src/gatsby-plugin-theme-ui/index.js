@@ -43,7 +43,9 @@ export default {
       fontWeight: "bold",
       margin: 0,
       span: {
-        display: "block",
+        display: "flex",
+        alignItems: "baseline",
+        justifyContent:"space-between",
         fontSize: 3,
         margin: "0 auto",
         maxWidth: "container",
