@@ -17,7 +17,7 @@ function IndexPage({ data }) {
               <div>Posted By {author} on {date}</div>
             </header>
             <p>{node.excerpt}</p>
-            <Link to={node.fields.slug}>View Article</Link>
+            <Styled.a as={Link} to={node.fields.slug}>View Article</Styled.a>
             <hr />
           </div>
         )

@@ -77,5 +77,8 @@ export default {
       fontSize: 4,
       lineHeight: "heading",
     },
+    a: {
+      color: "primary",
+    },
   },
 }
