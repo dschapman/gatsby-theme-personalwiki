@@ -4,10 +4,18 @@
  * @see https://theme-ui.com/gatsby-plugin/
  */
 export default {
+  initialColorMode: 'light',
   colors: {
     text: "#232129",
     background: "#fff",
     primary: "#639",
+    modes: {
+      dark: {
+        text: '#fff',
+        background: '#000',
+        primary: '#cc99cc',
+      }
+    }
   },
   fonts: {
     default:
@@ -41,6 +49,10 @@ export default {
         maxWidth: "container",
         padding: 3,
         width: "90vw",
+        a: {
+          color: "background",
+          textDecoration: "none"
+        }
       },
     },
     Main: {

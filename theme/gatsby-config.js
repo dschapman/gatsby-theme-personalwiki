@@ -1,6 +1,9 @@
-module.exports = {
+module.exports = options => {
+  return {
   siteMetadata: {
-    title: "Gatsby Theme Jam Personal Wiki",
+    title: "[Blog Title]",
+    author: "[Author Name]",
+    description: "[Description]",
   },
   plugins: [
     "gatsby-plugin-theme-ui",
@@ -9,7 +12,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/content/posts/`,
+        path: options.blogPath || `content/posts`,
       },
     },
     {
@@ -29,4 +32,5 @@ module.exports = {
     },
 
 ],
+}
 }

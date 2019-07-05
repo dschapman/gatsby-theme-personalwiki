@@ -1,7 +1,7 @@
 import React from "react"
 import { css, Global } from "@emotion/core"
 import { Layout as StyledLayout, Header, Main, Container } from "theme-ui"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery, Link } from "gatsby"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         `}
       />
       <Header>
-        <span>{data.site.siteMetadata.title}</span>
+        <span><Link to="/">{data.site.siteMetadata.title}</Link></span>
       </Header>
       <Main>
         <Container>{children}</Container>

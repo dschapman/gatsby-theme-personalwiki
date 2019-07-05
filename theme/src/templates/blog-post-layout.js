@@ -3,6 +3,8 @@ import React from 'react'
 import Layout from '../components/layout'
 import { Styled } from "theme-ui"
 import { graphql } from "gatsby"
+import styled from "@emotion/styled"
+import {css} from "@emotion/core"
 import MDXRenderer from "gatsby-plugin-mdx/mdx-renderer"
 
 function BlogPostLayout({ data }) {
@@ -12,8 +14,10 @@ function BlogPostLayout({ data }) {
       <article>
         <header>
           <Styled.h1>{title}</Styled.h1>
-          <span>Author: {author}</span>
-          <time>Date: {date}</time>
+          <div css={css`display:flex; justify-content:space-between;`}>
+          <Author>{author}</Author>
+          <Time>{date}</Time>
+          </div>
         </header>
         
         <MDXRenderer>{data.mdx.body}</MDXRenderer>
@@ -35,4 +39,15 @@ export const pageQuery = graphql`
     }
   }`
 
+const Author = styled.span(
+  `
+  padding-right: 1rem;
+  `
+)
+
+const Time = styled.time(
+  `
+
+  `
+)
 export default BlogPostLayout
