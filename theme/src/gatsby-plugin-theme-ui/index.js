@@ -54,7 +54,7 @@ export default {
         a: {
           color: "background",
           textDecoration: "none"
-        }
+        },
       },
     },
     Main: {
