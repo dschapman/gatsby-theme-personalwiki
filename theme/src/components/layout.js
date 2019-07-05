@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         `}
       />
       <Header>
-        <span><div css={css`display:flex;`}><MenuItem><Link to="/">{data.site.siteMetadata.title}</Link></MenuItem><MenuItem>About</MenuItem><MenuItem>Canon</MenuItem></div><ColorSwitcher /></span>
+        <span><div css={css`display:flex;`}><MenuItem><Link to="/">{data.site.siteMetadata.title}</Link></MenuItem><MenuItem><Link to="/about">About</Link></MenuItem><MenuItem>Canon</MenuItem></div><ColorSwitcher /></span>
       </Header>
       <Main>
       
