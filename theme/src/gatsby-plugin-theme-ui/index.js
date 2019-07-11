@@ -40,8 +40,8 @@ export default merge( {
         justifyContent:"space-between",
         fontSize: 3,
         margin: "0 auto",
-        maxWidth: "container",
         padding: 3,
+        maxWidth: "container",
         width: "90vw",
         a: {
           color: "background",
@@ -51,13 +51,17 @@ export default merge( {
     },
     Main: {
       margin: "0 auto",
+      maxWidth: "container",
       width: "90vw",
     },
     Container: {
-      width: "90vw",
       padding: 0,
       paddingBottom: 3,
       paddingTop: 3,
+    },
+    Footer: {
+      margin: "0 auto",
+      width: "container",
     },
     h1: {
       color: "text",

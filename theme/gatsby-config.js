@@ -1,9 +1,9 @@
-module.exports = options => {
+module.exports = ({blogDir='content/posts', assetDir='content/assets', title='[Site]', author='[Author Name]', description='[Description]'}) => {
   return {
   siteMetadata: {
-    title: "[Blog Title]",
-    author: "[Author Name]",
-    description: "[Description]",
+    title: title,
+    author: author,
+    description: description,
   },
   plugins: [
     "gatsby-plugin-theme-ui",
@@ -12,7 +12,14 @@ module.exports = options => {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: options.blogPath || `content/posts`,
+        path: blogDir,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `assets`,
+        path: assetDir,
       },
     },
     {

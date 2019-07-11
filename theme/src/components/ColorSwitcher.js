@@ -1,7 +1,7 @@
 import React from 'react'
 import Switch from './switch'
-import sun from "../../content/assets/sun.png"
-import moon from "../../content/assets/moon.png"
+import sun from "./switch/sun.png"
+import moon from "./switch/moon.png"
 import {css} from "@emotion/core"
 import { useColorMode } from 'theme-ui'
 

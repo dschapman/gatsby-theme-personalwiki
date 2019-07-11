@@ -5,5 +5,12 @@
  */
 
 module.exports = {
-  plugins: ["gatsby-theme-personalwiki"],
-}
+  plugins: [{
+   resolve: 'gatsby-theme-personalwiki',
+   options: {
+      title: 'My Site',
+      author: 'Daniel Chapman',
+      description: 'This is a demo site for my gatsby theme.'
+   }
+  },
+]}

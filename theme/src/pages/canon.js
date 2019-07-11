@@ -53,7 +53,7 @@ function Canon(props) {
     
     return(
        <div className="Canon">
-            <Styled.h2>Personal Canon</Styled.h2>
+            <Styled.h1>Personal Canon</Styled.h1>
             <p>These are the things that influence how I think and work.
                 The giants whose shoulders I clamber onto. 
                 The melodies I don't ever want to stop humming.

@@ -3,9 +3,32 @@ const fs = require('fs');
 const mkdirp = require('mkdirp');
 const { createFilePath } = require('gatsby-source-filesystem')
 
+//onPreBootstrap hook initializes directories that the theme relies on
+exports.onPreBootstrap = ({ store, reporter }, options) => {
+  const { program } = store.getState()
+
+  blogPath = options.blogPath || `content/posts`
+  assetPath = options.assetPath || `content/assets`
+  contentPath = `content`
+
+  const dirs = [
+    path.join(program.directory, contentPath),
+    path.join(program.directory, blogPath),
+    path.join(program.directory, assetPath),
+    path.join(program.directory, "src/pages"),
+  ]
+
+  dirs.forEach(dir => {
+    if (!fs.existsSync(dir)) {
+      reporter.log(`creating the ${dir} directory`)
+      mkdirp.sync(dir)
+    }
+  })
+}
+
 // Here we're adding extra stuff to the "node" (like the slug)
 // so we can query later for all blogs and get their slug
-exports.onCreateNode = ({ node, actions, getNode }, themeOptions) => {
+exports.onCreateNode = ({ node, actions, getNode }, options) => {
   const { createNodeField } = actions
   if (node.internal.type === 'Mdx') {
     console.log("Found an MDX node!")
@@ -76,23 +99,3 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
-//onPreBootstrap hook initializes directories that the theme relies on
-exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
-  const { program } = store.getState()
-
-  blogPath = themeOptions.blogPath || `content/posts`
-  contentPath = `content`
-
-  const dirs = [
-    path.join(program.directory, contentPath),
-    path.join(program.directory, blogPath),
-    path.join(program.directory, "src/pages"),
-  ]
-
-  dirs.forEach(dir => {
-    if (!fs.existsSync(dir)) {
-      reporter.log(`creating the ${dir} directory`)
-      mkdirp.sync(dir)
-    }
-  })
-}

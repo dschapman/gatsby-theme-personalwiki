@@ -16,7 +16,7 @@ function BlogPostLayout({ data }) {
           <Styled.h1>{title}</Styled.h1>
           <div css={css`display:flex; justify-content:space-between;`}>
           <Author>{author}</Author>
-          <Time>{date}</Time>
+          <Date>{date}</Date>
           </div>
         </header>
         
@@ -45,7 +45,7 @@ const Author = styled.span(
   `
 )
 
-const Time = styled.time(
+const Date = styled.time(
   `
 
   `
