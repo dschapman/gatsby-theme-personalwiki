@@ -30,6 +30,7 @@
     "gatsby-plugin-page-creator": "^2.1.2",
     "gatsby-plugin-theme-ui": "^0.2.2",
     "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-transformer-yaml": "^2.2.0",
     "react-switch": "^5.0.0",
     "theme-ui": "^0.2.2"
   },

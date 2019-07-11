@@ -24,7 +24,7 @@ function IndexPage({ data }) {
       })}
     </Layout>
   )
-    }
+}
 export default IndexPage
 
 export const pageQuery = graphql`

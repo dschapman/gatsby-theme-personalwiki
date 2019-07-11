@@ -19,6 +19,9 @@ exports.onCreateNode = ({ node, actions, getNode }, themeOptions) => {
       value: `/blog${value}`
     })
   }
+  if (node.internal.type === 'Canon') {
+    console.log("Found a YML node")
+  }
 }
 
 
@@ -78,8 +81,10 @@ exports.onPreBootstrap = ({ store, reporter }, themeOptions) => {
   const { program } = store.getState()
 
   blogPath = themeOptions.blogPath || `content/posts`
+  contentPath = `content`
 
   const dirs = [
+    path.join(program.directory, contentPath),
     path.join(program.directory, blogPath),
     path.join(program.directory, "src/pages"),
   ]

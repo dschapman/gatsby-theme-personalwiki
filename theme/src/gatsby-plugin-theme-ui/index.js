@@ -3,20 +3,12 @@
  * @see https://theme-ui.com/
  * @see https://theme-ui.com/gatsby-plugin/
  */
-export default {
+import merge from "lodash.merge"
+import colors from "./colors"
+
+export default merge( {
   initialColorMode: 'light',
-  colors: {
-    text: "#232129",
-    background: "#fff",
-    primary: "#639",
-    modes: {
-      dark: {
-        text: '#fff',
-        background: '#000',
-        primary: '#cc99cc',
-      }
-    }
-  },
+  colors,
   fonts: {
     default:
       '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"',
@@ -59,10 +51,10 @@ export default {
     },
     Main: {
       margin: "0 auto",
-      maxWidth: "container",
       width: "90vw",
     },
     Container: {
+      width: "90vw",
       padding: 0,
       paddingBottom: 3,
       paddingTop: 3,
@@ -80,5 +72,6 @@ export default {
     a: {
       color: "primary",
     },
+     
   },
-}
+})
